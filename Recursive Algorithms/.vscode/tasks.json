@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build With GCC", 
+			"command": "/usr/bin/g++-13",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/*.cpp",
+				"-o",
+				"${fileDirname}/MikeGCC"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "GCC13"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Build with Clang",
+			"command": "/usr/bin/clang++-18",
+			"args": [
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/*.cpp",
+				"-o",
+				"${fileDirname}/MikeClang"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "Clang"
+		}
+	]
+}
